@@ -1,20 +1,24 @@
-import logo from './logo.png';
+import React, {useState, useEffect} from 'react';
 import './App.css';
+import fetchStocks from './services/stock-api';
+import Stocks from './components/Stocks';
 
 function App() {
+  const [stocks, setStocks] = useState();
+
+  async function getStocks() {
+    const stockResults = await fetchStocks();
+
+    setStocks(stockResults.data)
+  }
+
+  useEffect(() => {
+   getStocks()
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <a
-          className="App-link"
-          href="https://www.cinquewd.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Visit Cinque Web Development
-        </a>
-      </header>
+      <Stocks stocks={stocks}/>
     </div>
   );
 }
