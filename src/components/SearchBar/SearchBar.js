@@ -9,10 +9,10 @@ export default function SearchBar({handleSearchSubmit}) {
     }
 
     return (
-        <div>
+        <div className="search-form">
             <form onSubmit={(e) => handleSearchSubmit(e, term)}>
-            <input onChange={handleInputChange} value={term}></input>
-            <button type="submit">Search</button>
+            <input required className="search-input" onChange={handleInputChange} value={term}></input>
+            <button className="search-btn" type="submit">Search</button>
             </form>
         </div>
     )
