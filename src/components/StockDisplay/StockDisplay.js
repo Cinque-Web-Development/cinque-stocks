@@ -28,7 +28,7 @@ export default function StockDisplay({stock}) {
         !stock.open || !stock.close || !stock.volume ?
         <div className="stock-card">
             <div>
-            {stock.symbol} <br /><br />
+            <h2>{stock.symbol}</h2> <br /><br />
             <img className="stock-image" src={stockIcon} alt=""></img>
             <h3>Date: {stock.date.slice(0, 10)}</h3>
             </div>
