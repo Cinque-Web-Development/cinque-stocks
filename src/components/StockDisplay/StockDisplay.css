@@ -1,8 +1,24 @@
 .stock-card {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    border-bottom: 2px solid black;
+    margin: 30px;
 }
 
 .stock-image {
     width: 70px;
+}
+
+.stock-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.stock-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }

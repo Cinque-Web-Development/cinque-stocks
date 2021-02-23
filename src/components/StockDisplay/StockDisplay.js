@@ -27,12 +27,12 @@ export default function StockDisplay({stock}) {
     return (
         !stock.open || !stock.close || !stock.volume ?
         <div className="stock-card">
-            <div>
+            <div className="stock-head">
             <h2>{stock.symbol}</h2> <br /><br />
             <img className="stock-image" src={stockIcon} alt=""></img>
             <h3>Date: {stock.date.slice(0, 10)}</h3>
             </div>
-            <div>
+            <div className="stock-info">
                 <h4 hidden>Open: ${stock.open}</h4>
                 <h4>High: ${stock.high}</h4>
                 <h4 hidden>Close: ${stock.close}</h4>
@@ -40,12 +40,12 @@ export default function StockDisplay({stock}) {
             </div>
         </div> :
         <div className="stock-card">
-            <div>
+            <div className="stock-head">
             <h2>{stock.symbol}</h2> <br /><br />
             <img className="stock-image" src={stockIcon} alt=""></img>
             <h3>Date: {stock.date.slice(0, 10)}</h3>
             </div>
-            <div>
+            <div className="stock-info">
                 <h4>Open: ${stock.open}</h4>
                 <h4>High: ${stock.high}</h4>
                 <h4>Close: ${stock.close}</h4>
