@@ -3,6 +3,6 @@ const key = process.env.REACT_APP_TWELVE_KEY
 const CORS = "https://kstick-cors-anywhere.herokuapp.com/"
 
 export default function fetchStocks() {
-    return axios.get(`${CORS}api.twelvedata.com/time_series?symbol=BTC/USD,ETH/USD,AAPL,ZOM&interval=1min&is_batch=true&apikey=${key}`)
+    return axios.get(`${CORS}api.marketstack.com/v1/eod?symbols=AAPL,MSFT,AMZN,GOOGL,FB,NFLX,TSLA,PYPL,ZM&access_key=${key}&limit=10`)
     .catch((err) => console.log(err))
 }
