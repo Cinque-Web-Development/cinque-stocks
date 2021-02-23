@@ -6,16 +6,19 @@ import SearchBar from './components/SearchBar/SearchBar';
 import Footer from './components/Footer/Footer';
 import {connect} from 'react-redux';
 import getStocks from './redux/actionCreators';
+import Ticker from './components/Tickers/Ticker';
 
 function App({stocks, getStocks}) {
+  const [ticker, setTicker] = useState([])
   const [searchTerm, setSearchTerm] = useState('')
 
- 
+  
 
   useEffect(() => {
   if(searchTerm) {
     getStocks(searchTerm)
   }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchTerm])
 
   const handleSearchSubmit = (e, term) => {
@@ -26,6 +29,7 @@ function App({stocks, getStocks}) {
   return (
     <div className="App">
       <NavBar />
+      <Ticker />
       <SearchBar handleSearchSubmit={handleSearchSubmit}/>
       <Stocks stocks={stocks}/>
       <Footer />
