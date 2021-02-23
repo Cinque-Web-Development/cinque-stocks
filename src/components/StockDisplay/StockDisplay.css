@@ -1,0 +1,8 @@
+.stock-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.stock-image {
+    width: 50px;
+}
