@@ -5,7 +5,6 @@ export default function Footer() {
     return (
         <div className="footer">
             <div className="cinque-footer">
-                <img className="image" src="/images/cinque.png" alt=""></img> <br />
                 <p className="cinque-link">&copy; 2020 <a className="cinque-link" href="https://www.cinquewd.com" target="_blank" rel="noreferrer">Cinque Web Development</a></p>
             </div>
             <div className="footer-links">
