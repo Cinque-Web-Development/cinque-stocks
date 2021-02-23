@@ -1,0 +1,43 @@
+.footer {
+    height: 180px;
+    background-color: rgb(148, 214,244);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cinque-footer {
+    grid-column: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:rgb(27, 76, 167)
+}
+
+.cinque-link {
+    text-decoration: none;
+    color: rgb(27, 76, 167);
+}
+
+.cinque-links:hover {
+    color: white;
+    transition: .3s;
+}
+
+.footer-links {
+    grid-column: 3/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(27, 76, 167);
+}
+
+.footer-links > a {
+    color: rgb(27, 76, 167);
+    padding: 5px
+}
+
+.footer-links > a:hover {
+    color: white;
+    transition: .7s;
+}

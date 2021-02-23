@@ -13,9 +13,8 @@ export default function StockDisplay({stock}) {
     const [icon, setIcon] = useState('')
 
     useEffect(() =>  {
-        console.log(stock.symbol)
         setIcon(stock.symbol)
-    }, [])
+    }, [stock.symbol])
 
     let stockIcon = icon === "AAPL" ? Apple : icon === "MSFT" ? MicroSoft : icon === "FB" ? FaceBook : icon === "GOOG" ? Google : icon === "TSLA" ? Tesla : icon === "ZM" ? Zoom : icon === "ZOM" ? Zom : ''
 
