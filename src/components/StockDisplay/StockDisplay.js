@@ -19,6 +19,10 @@ export default function StockDisplay({stock}) {
 
     let stockIcon = icon === "AAPL" ? Apple : icon === "MSFT" ? MicroSoft : icon === "FB" ? FaceBook : icon === "GOOG" ? Google : icon === "TSLA" ? Tesla : icon === "ZM" ? Zoom : icon === "ZOM" ? Zom : ''
 
+    // eslint-disable-next-line no-extend-native
+    Number.prototype.commafy = function () {
+        return String(this).commafy();
+    };
 
     return (
         !stock.open || !stock.close || !stock.volume ?
@@ -45,7 +49,7 @@ export default function StockDisplay({stock}) {
                 <h4>Open: ${stock.open}</h4>
                 <h4>High: ${stock.high}</h4>
                 <h4>Close: ${stock.close}</h4>
-                <h4>Volume: {stock.volume}</h4>
+                <h4>Volume: {stock.volume.toLocaleString('en')}</h4>
             </div>
         </div>
     //     ? !stock.close || !stock.high || !stock.volume ?
