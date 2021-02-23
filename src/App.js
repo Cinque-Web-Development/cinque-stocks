@@ -4,7 +4,7 @@ import fetchStocks from './services/stock-api';
 import Stocks from './components/Stocks';
 
 function App() {
-  const [stocks, setStocks] = useState();
+  const [stocks, setStocks] = useState([]);
 
   async function getStocks() {
     const stockResults = await fetchStocks();
