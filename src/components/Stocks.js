@@ -8,13 +8,15 @@ export default function Stocks({stocks}) {
                   {stocks.map((stock) => 
                     <div>
                         {stock.symbol}<br/>
-                        {stock.date}
-                        {stock.open}
+                        Date: {stock.date.slice(0, 10)}<br />
+                        High: {stock.high} <br />
+                        Open: {stock.open} <br />
+                        Close: {stock.close} <br />
+                        Volume: {stock.volume}
                     </div>
                   )}
               </div>
           :
-              ""       
-                 
+              ""                      
 )
 }
