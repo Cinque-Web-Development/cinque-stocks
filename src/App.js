@@ -6,10 +6,8 @@ import SearchBar from './components/SearchBar/SearchBar';
 import Footer from './components/Footer/Footer';
 import {connect} from 'react-redux';
 import getStocks from './redux/actionCreators';
-import Ticker from './components/Tickers/Ticker';
 
 function App({stocks, getStocks}) {
-  const [ticker, setTicker] = useState([])
   const [searchTerm, setSearchTerm] = useState('')
 
   
@@ -29,7 +27,6 @@ function App({stocks, getStocks}) {
   return (
     <div className="App">
       <NavBar />
-      <Ticker />
       <SearchBar handleSearchSubmit={handleSearchSubmit}/>
       <Stocks stocks={stocks}/>
       <Footer />

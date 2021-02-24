@@ -1,4 +1,5 @@
 import fetchStocks from "../services/stock-api";
+
 import {GET_STOCKS} from './actions';
 
 export default function getStocks(stockSymbol) {
