@@ -50,3 +50,21 @@
     justify-content: center;
     align-items: center;
 }
+
+.ticker-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    width: 120px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: rgb(27, 76, 167)
+}
+
+.ticker-link:hover {
+    color: rgb(27, 76, 167);
+    background-color: white;
+    transition: .4s;
+}

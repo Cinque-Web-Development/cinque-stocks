@@ -10,7 +10,7 @@ export default function NavBar() {
                 <h1 className="title">Cinque Stocks</h1>
             </div>
             <div className="tickers">
-               <Link to="/tickers">Tickers</Link>
+               <Link className="ticker-link" to="/tickers">Stock Tickers</Link>
             </div>
         </div>
     )
