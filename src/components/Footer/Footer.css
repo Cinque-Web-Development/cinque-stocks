@@ -3,9 +3,6 @@
     background-color: rgb(148, 214,244);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
 }
 
 .cinque-footer {

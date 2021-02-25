@@ -43,3 +43,10 @@
     color: rgb(27, 76, 167);
     transition: .3s;
 }
+
+.tickers {
+    grid-column: 3/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

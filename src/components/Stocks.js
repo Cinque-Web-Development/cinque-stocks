@@ -3,6 +3,7 @@ import StockDisplay from "./StockDisplay/StockDisplay";
 import "./Stocks.css";
 
 export default function Stocks({ stocks }) {
+
   return stocks ? (
     <>
       {stocks.map((stock) => (
@@ -12,6 +13,6 @@ export default function Stocks({ stocks }) {
       ))}
     </>
   ) : (
-    ""
+    "Enter in a stock ticker"
   );
 }

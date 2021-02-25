@@ -32,21 +32,10 @@ export default function StockDisplay({ stock }) {
       ? Zom
       : "";
 
-  return !stock.open || !stock.close || !stock.volume ? (
-    <div className="stock-card">
-      <div className="stock-head">
-        <h2>{stock.symbol}</h2> <br />
-        <br />
-        <img className="stock-image" src={stockIcon} alt=""></img>
-        <h3>Date: {stock.date.slice(0, 10)}</h3>
-      </div>
-      <div className="stock-info">
-        <h4 hidden>Open: ${parseFloat(stock.open).toFixed(2)}</h4>
-        <h4>High: ${parseFloat(stock.high).toFixed(2)}</h4>
-        <h4 hidden>Close: ${parseFloat(stock.close).toFixed(2)}</h4>
-        <h4 hidden>Volume: {stock.volume.toLocaleString("en")}</h4>
-      </div>
-    </div>
+  return !stock === "underfined" ? (
+        <div>
+            "This stock is not available"
+        </div>
   ) : (
     <div className="stock-card">
       <div className="stock-head">
