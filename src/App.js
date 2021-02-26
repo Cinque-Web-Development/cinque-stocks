@@ -27,7 +27,6 @@ function App({stocks, getStocks}) {
   if(searchTerm) {
     getStocks(searchTerm)
   }
-  getTickers()
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchTerm])
 
@@ -38,7 +37,7 @@ function App({stocks, getStocks}) {
 
   return (
     <Router>
-      <NavBar tickers={tickers} />
+      <NavBar tickers={tickers} getTickers={getTickers}/>
       <Route exact path="/" render={() =>
     <div className="App">
       <SearchBar handleSearchSubmit={handleSearchSubmit}/>

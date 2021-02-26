@@ -4,8 +4,13 @@ import './Tickers.css';
 
 export default function Tickers({ticker}) {
     return (
-      <div>
-       {ticker.name} - {ticker.symbol}
+      <div className="ticker-page">
+       <div className="ticker-company">
+            {ticker.name}
+       </div>
+       <div className="ticker-symbol">
+            {ticker.symbol}
+       </div>
       </div>
     )
 }

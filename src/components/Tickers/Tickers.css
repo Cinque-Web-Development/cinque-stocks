@@ -1,0 +1,23 @@
+.ticker-page {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     margin: 20px;
+}
+
+.ticker-company {
+    grid-column: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.ticker-symbol {
+    grid-column: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
