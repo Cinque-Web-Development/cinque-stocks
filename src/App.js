@@ -6,20 +6,20 @@ import NavBar from './components/NavBar/NavBar';
 import SearchBar from './components/SearchBar/SearchBar';
 import Footer from './components/Footer/Footer';
 import {connect} from 'react-redux';
-import getStocks from './redux/actionCreators';
-import fetchTickers from './services/tickers-api';
+import {getStocks} from './redux/actionCreators';
+import {getTickers} from './redux/actionCreators';
 import TickerPage from './Pages/TickerPage'
 
 
-function App({stocks, getStocks}) {
+function App({stocks, getStocks, tickers, getTickers}) {
   const [searchTerm, setSearchTerm] = useState('')
-  const [tickers, setTickers] = useState([]);
+  // const [tickers, setTickers] = useState([]);
 
-   async function getTickers() {
-    const response = await fetchTickers();
-    console.log(response.data.data);
-    setTickers(response.data.data)
-  }
+  //  async function getTickers() {
+  //   const response = await fetchTickers();
+  //   console.log(response.data.data);
+  //   setTickers(response.data.data)
+  // }
 
   
 
@@ -57,7 +57,7 @@ function App({stocks, getStocks}) {
 }
 
 const mapStateToProps = (state) => {
-  return {stocks: state.stocks}
+  return {stocks: state.stocks, tickers: state.tickers}
 }
 
-export default connect(mapStateToProps, {getStocks})(App);
+export default connect(mapStateToProps, {getStocks, getTickers})(App);

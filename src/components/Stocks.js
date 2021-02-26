@@ -4,7 +4,7 @@ import "./Stocks.css";
 
 export default function Stocks({ stocks }) {
 
-  return stocks ? (
+  return stocks.length ? (
     <>
       {stocks.map((stock) => (
         <div className="stock-display">
@@ -13,6 +13,6 @@ export default function Stocks({ stocks }) {
       ))}
     </>
   ) : (
-    "Enter in a stock ticker"
+    "Enter in a stock ticker symbol"
   );
 }

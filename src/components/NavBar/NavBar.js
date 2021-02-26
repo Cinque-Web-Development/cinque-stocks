@@ -2,7 +2,8 @@ import React from 'react';
 import './NavBar.css';
 import {Link} from 'react-router-dom';
 
-export default function NavBar({getTickers}) {
+
+ function NavBar({getTickers}) {
     return (
         <div className="navbar">
             <div className="stock-logo">
@@ -15,3 +16,7 @@ export default function NavBar({getTickers}) {
         </div>
     )
 }
+
+
+
+export default NavBar
