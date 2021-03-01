@@ -1,9 +1,12 @@
-# Cinque's create-react-app Template
+# Cinque Stocks
 
-### To use our React App template, paste the following command in your terminal:
-```npx create-react-app <your-project-name> --template cra-template-cinque```
 
-### In addition to the basic create-react-app template, our template comes bootstrapped with the following node modules:
-- axios
-- fontawesome
-- react-router-dom# cinque-stocks
+Developed by: [Samuel Trahan](https://www.linkedin.com/samueltrahan)
+
+# Description
+Cinque stocks is a simple app developed for learning the basics of how to implement Redux. You can look up stock prices for a wide variety of companies. Click the stock tickers if you are looking for a specific company.
+
+Tech used:<br />
+React<br />
+Redux<br />
+
